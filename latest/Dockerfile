@@ -9,7 +9,10 @@ RUN wget -q -O - http://pkg.jenkins-ci.org/debian-stable/jenkins-ci.org.key | ap
     && apt-get update \
     && apt-get install -y jenkins \
     && apt-get install -y php-cli \
+    && apt-get install -y jpegoptim optipng \
     && apt-get clean autoclean \
-    && apt-get autoremove 
-    
+    && apt-get autoremove \
+    && curl -o /usr/local/bin/composer https://getcomposer.org/composer.phar \
+    && chmod +x /usr/local/bin/composer
+
 EXPOSE 5000
