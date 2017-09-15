@@ -16,3 +16,5 @@ RUN wget -q -O - http://pkg.jenkins-ci.org/debian-stable/jenkins-ci.org.key | ap
     && chmod +x /usr/local/bin/composer
 
 EXPOSE 5000
+
+CMD /bin/bash
