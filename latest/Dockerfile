@@ -8,6 +8,7 @@ RUN wget -q -O - http://pkg.jenkins-ci.org/debian-stable/jenkins-ci.org.key | ap
     && echo "deb http://pkg.jenkins-ci.org/debian-stable binary/" | tee -a /etc/apt/sources.list \
     && apt-get update \
     && apt-get install -y jenkins \
+    && apt-get install -y php-cli \
     && apt-get clean autoclean \
     && apt-get autoremove 
     
