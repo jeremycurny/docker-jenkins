@@ -4,6 +4,10 @@ MAINTAINER "Jeremy CURNY" <jeremy.curny.pro@gmail.com>
 
 ARG DEBIAN_FRONTEND=noninteractive
 
+RUN whoami
+
+USER root
+
 RUN \
     curl -sL https://deb.nodesource.com/setup_6.x | bash \
     apt-get update && apt-get install -y \
@@ -18,3 +22,5 @@ RUN \
 RUN \
   curl -o /usr/local/bin/composer https://getcomposer.org/composer.phar \
   && chmod +x /usr/local/bin/composer
+
+USER jenkins
