@@ -11,8 +11,6 @@ RUN \
     && curl -sL -o /usr/local/bin/composer https://getcomposer.org/composer.phar \
     && chmod +x /usr/local/bin/composer
 
-RUN apt-get update 
-
 RUN apt-get update \
   && apt-get install -y dos2unix jpegoptim optipng \
   && apt-get install -y php-cli php-curl php-gd php-imap php-intl php-mbstring php-mcrypt php-memcache php-mysql php-sqlite3 php-xsl \
